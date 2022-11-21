@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins' , sans-serif; 
+} 
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #252839;
+}
+h1{
+    position: relative;
+    font-size: 14vw;
+    color: #252839;
+    text-transform: uppercase;
+}
+h1::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #01fe87;
+    /*-webkit-text-stroke: 0vw #383d52;*/
+    overflow: hidden;
+    animation: animate 12s linear ;
+    z-index: 1;
+    background: #252839;
+}
+@keyframes animate{
+    0%,100%
+    {
+        width: 0;
+    }
+    50%
+    {
+        width: 100%;
+    }
+}
+img{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width:100%;
+    z-index: 0;
+}
+.container {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width:100%;
+}
+.container span{
+    text-transform: uppercase;
+    display: block;
+}
+.text1{
+    color: #252839;
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+    background: #252839;
+    position: relative;
+    animation: text 3s 12s;  
+    animation-fill-mode: forwards;
+}
+.text2, a{
+    font-size: 30px;
+    color: #252839;
+    animation: next 3s 12s;  
+    animation-fill-mode: forwards;
+    text-decoration: none;
+    cursor: pointer;
+}
+a{
+    color: #252839;
+}
+@keyframes text {
+    to{
+        color: rgb(255, 86, 86);
+        text-shadow: 0 0 10px rgb(255, 145, 145),
+                     0 0 20px rgb(255, 145, 145),
+                     0 0 40px rgb(255, 145, 145),
+                     0 0 80px rgb(255, 145, 145),
+                    0 0 160px rgb(255, 145, 145);
+
+        
+    }
+    0%{
+        color: #252839;
+        margin-bottom: -40px;
+    }
+    30%{
+        letter-spacing: 25px;
+        margin-bottom: -40px;
+    }
+    85%{
+        letter-spacing: 8px;
+        margin-bottom: -40px;
+
+    }
+}
+@keyframes next {
+    to{
+        color: #ff0000;
+    }
+}
